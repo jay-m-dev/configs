@@ -1,4 +1,4 @@
-let mapleader=" "
+let mapleader=","
 
 " testing
 nnoremap <Leader>t :TestNearest<CR>
@@ -15,6 +15,8 @@ nnoremap <Leader>; $a;<Esc>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>Q :q!<CR>
+nnoremap <C-P> :FZF<CR>
+
 " shorter commands
 cnoreabbrev tree NERDTreeToggle
 cnoreabbrev blame Gblame

@@ -1,7 +1,7 @@
 set number
 set mouse=a
 set numberwidth=1
-set clipboard=unnamed
+set clipboard=unnamedplus
 syntax on
 set showcmd
 set ruler
@@ -15,14 +15,16 @@ so ~/.vim/plugins.vim
 so ~/.vim/plugin-config.vim
 so ~/.vim/maps.vim
 
-colorscheme gruvbox
 let g:gruvbox_contrast_dark = "hard"
+colorscheme gruvbox
 highlight Normal ctermbg=NONE
 set laststatus=2
 set noshowmode
 
 au BufNewFile,BufRead *.html set filetype=htmldjango
-lua require'colorizer'.setup()
+if has('nvim')
+	lua require'colorizer'.setup()
+endif
 
 "" Searching
 set hlsearch                    " highlight matches
