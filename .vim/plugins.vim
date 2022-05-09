@@ -42,6 +42,12 @@ Plug 'mhinz/vim-signify'
 Plug 'yggdroot/indentline'
 Plug 'scrooloose/nerdcommenter'
 
+Plug 'pangloss/vim-javascript'
+Plug 'peitalin/vim-jsx-typescript'
+"Plug 'ryanoasis/vim-devicons'
+
+Plug 'yaegassy/coc-pydocstring', {'do': 'npm install --frozen-lockfile'}
+
 " git
 Plug 'tpope/vim-fugitive'
 

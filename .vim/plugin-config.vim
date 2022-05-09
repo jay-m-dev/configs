@@ -27,7 +27,7 @@ let g:lightline = {
 
 "  nerdtree
 let NERDTreeShowHidden=1
-let NERDTreeQuitOnOpen=1
+let NERDTreeQuitOnOpen=0
 let NERDTreeAutoDeleteBuffer=1
 let NERDTreeMinimalUI=1
 let NERDTreeDirArrows=1
@@ -46,8 +46,12 @@ let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
 let g:coc_global_extensions = [
       \ 'coc-tsserver',
       \ 'coc-json',
-      \ 'coc-html',
-      \ 'coc-python'
+      \ 'coc-html-css-support',
+      \ 'coc-css',
+      \ 'coc-sql',
+      \ 'coc-yaml',
+      \ 'coc-python',
+      \ 'coc-pydocstring',
       \ ]
 " tmux navigator
 let g:tmux_navigator_no_mappings = 1

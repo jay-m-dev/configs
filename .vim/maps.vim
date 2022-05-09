@@ -19,7 +19,7 @@ nnoremap <C-P> :FZF<CR>
 
 " shorter commands
 cnoreabbrev tree NERDTreeToggle
-cnoreabbrev blame Gblame
+cnoreabbrev blame Git blame
 cnoreabbrev find NERDTreeFind
 cnoreabbrev diff Gdiff
 
@@ -64,9 +64,19 @@ nnoremap <Leader>k :m .-2<CR>==
 nnoremap <Leader>j :m .+1<CR>==
 
 " faster scrolling
-nnoremap <C-j> 10<C-e>
-nnoremap <C-k> 10<C-y>
+" nnoremap <C-j> 10<C-e>
+" nnoremap <C-k> 10<C-y>
+
 nmap <Leader>s <Plug>(easymotion-s2)
+
+" navigate buffers
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+inoremap jk <ESC>
+inoremap <leader><leader> <right>
 
 " git
 nnoremap <Leader>G :G<cr>
