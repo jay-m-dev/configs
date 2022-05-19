@@ -16,6 +16,7 @@ so ~/.vim/plugin-config.vim
 so ~/.vim/maps.vim
 
 let g:gruvbox_contrast_dark = "hard"
+set background=dark
 colorscheme gruvbox
 highlight Normal ctermbg=NONE
 set laststatus=2
