@@ -43,7 +43,7 @@ esac
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
-#force_color_prompt=yes
+force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
@@ -88,10 +88,15 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
+alias g='git'
+alias dc='docker compose'
+alias d='docker'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias t='cat ~/todo.txt'
 alias v='nvim'
+alias vt='v ~/todo.txt'
 alias gs='git status'
 alias ga='git add'
 alias gaa='git add --all'
@@ -105,7 +110,6 @@ alias ...='cd ../..;pwd'
 alias ....='cd ../../..;pwd'
 alias c='clear'
 alias h='history'
-# Make a directory and all parent directories with verbosity
 alias mkdir='mkdir -p -v'
 
 # Add an "alert" alias for long running commands.  Use like so:
