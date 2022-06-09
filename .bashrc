@@ -113,6 +113,12 @@ alias ....='cd ../../..;pwd'
 alias c='clear'
 alias h='history'
 alias mkdir='mkdir -p -v'
+alias gpu='git pull'
+alias ctl='systemctl'
+alias s='sudo'
+alias serv='service'
+alias sctl='sudo systemctl'
+alias sserv='sudo service'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert

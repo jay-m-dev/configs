@@ -1098,6 +1098,12 @@ complete -F _complete_alias ....
 complete -F _complete_alias c
 complete -F _complete_alias h
 complete -F _complete_alias mkdir
+complete -F _complete_alias gpu
+complete -F _complete_alias ctl
+complete -F _complete_alias s
+complete -F _complete_alias serv
+complete -F _complete_alias sctl
+complete -F _complete_alias sserv
 
 ##  to complete all aliases, run this line after all aliases have been defined;
 #complete -F _complete_alias "${!BASH_ALIASES[@]}"
