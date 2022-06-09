@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mkdir ~/.config/nvim
+[ ! -d "~/config/nvim" ] && mkdir ~/.config/nvim
 cp ~/configs/init.vim ~/.config/nvim/
 cp ~/configs/.vimrc ~
 cp -r ~/configs/.vim ~
