@@ -91,6 +91,8 @@ fi
 alias g='git'
 alias dc='docker compose'
 alias d='docker'
+alias di='docker images'
+alias de='docker exec -it'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'

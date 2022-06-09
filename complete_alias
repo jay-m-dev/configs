@@ -1076,6 +1076,8 @@ __compal__main
 complete -F _complete_alias g
 complete -F _complete_alias d
 complete -F _complete_alias dc
+complete -F _complete_alias di
+complete -F _complete_alias de
 complete -F _complete_alias ll
 complete -F _complete_alias la
 complete -F _complete_alias l
