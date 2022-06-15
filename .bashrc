@@ -106,14 +106,14 @@ alias gc='git commit -m'
 alias gl='git log --oneline'
 alias gb='git checkout -b'
 alias gd='git diff'
-alias gp='git push'
+alias gpu='git push'
 alias ..='cd ..;pwd'
 alias ...='cd ../..;pwd'
 alias ....='cd ../../..;pwd'
 alias c='clear'
 alias h='history'
 alias mkdir='mkdir -p -v'
-alias gpu='git pull'
+alias gp='git pull'
 alias ctl='systemctl'
 alias s='sudo'
 alias serv='service'
@@ -145,3 +145,5 @@ if ! shopt -oq posix; then
 fi
 
 set -o vi
+
+export PATH="$HOME/.local/bin:$PATH"
