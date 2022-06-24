@@ -25,7 +25,7 @@ Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
 
 " autocomplete
-Plug 'sirver/ultisnips'
+"Plug 'sirver/ultisnips'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " test
@@ -44,7 +44,7 @@ Plug 'scrooloose/nerdcommenter'
 
 Plug 'pangloss/vim-javascript'
 Plug 'peitalin/vim-jsx-typescript'
-"Plug 'ryanoasis/vim-devicons'
+Plug 'ryanoasis/vim-devicons'
 
 Plug 'yaegassy/coc-pydocstring', {'do': 'npm install --frozen-lockfile'}
 
