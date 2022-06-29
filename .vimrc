@@ -1,7 +1,7 @@
 set number
-set mouse=a
+"set mouse=a " use right-click to copy paste instead, otherwise things crash!
 set numberwidth=1
-set clipboard=unnamedplus
+set clipboard+=unnamedplus
 syntax on
 set showcmd
 set ruler
@@ -16,8 +16,10 @@ so ~/.vim/plugin-config.vim
 so ~/.vim/maps.vim
 
 let g:gruvbox_contrast_dark = "hard"
+"let g:codedark_italics = 1
 set background=dark
 colorscheme gruvbox
+"colorscheme codedark
 highlight Normal ctermbg=NONE
 set laststatus=2
 set noshowmode
@@ -33,3 +35,4 @@ set incsearch                   " incremental searching
 set ignorecase                  " searches are case insensitive...
 set smartcase                   " ... unless they contain at least one capital letter
 
+"set conceallevel=0

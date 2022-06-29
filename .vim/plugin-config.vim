@@ -52,6 +52,8 @@ let g:coc_global_extensions = [
       \ 'coc-sql',
       \ 'coc-yaml',
       \ 'coc-python',
+      \ 'coc-emmet',
+      \ 'coc-prettier',
       \ 'coc-snippets'
       \ ]
 " tmux navigator
@@ -259,3 +261,4 @@ let $FZF_DEFAULT_OPTS='--layout=reverse'
     "return search_result
 "endfunction
 
+let g:indentLine_conceallevel = 0
