@@ -6,3 +6,5 @@ cp ~/configs/.vimrc ~
 cp -r ~/configs/.vim ~
 cp ~/configs/.bashrc ~
 cp ~/configs/.bash_completion ~
+cp ~/configs/.bash_profile ~
+source ~/.bash_profile
