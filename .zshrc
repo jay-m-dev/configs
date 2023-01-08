@@ -106,10 +106,6 @@ eval `dircolors ~/.dircolors`
 function activate() { source $PWD/.venv_${PWD##*/}/bin/activate; }
 function create() { python3 -m venv $PWD/.venv_${PWD##*/}; activate}
 
-# export -f activate
-# export -f create
-
-# && source ./.venv_$(PWD | rev | cut -d '/' -f 1 | rev)/bin/activate"
 alias v="nvim"
 alias c="clear"
 alias zshcfg="nvim ~/.zshrc"
@@ -117,12 +113,14 @@ alias vimcfg="nvim ~/.config/nvim/init.vim"
 alias ll="ls -la"
 alias gs="git status"
 alias ga="git add"
+alias gaa="git add ."
 alias gc="git commit -m"
-alias gp="git push"
+alias gp="git pull"
+alias gpu="git push"
 alias gd="git diff"
 alias gdc="git diff --cached"
-alias gc="git checkout"
+alias gco="git checkout"
 alias gcm="git checkout master"
 alias gcb="git checkout -b"
-alias gpl="git pull"
+# requires VcXsrv to display graphs from matplotlib in WSL2
 DISPLAY=`grep -oP "(?<=nameserver ).+" /etc/resolv.conf`:0.0
