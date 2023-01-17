@@ -39,6 +39,7 @@ call plug#begin("~/.vim/plugged")
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-repeat'
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+    Plug 'easymotion/vim-easymotion'
 call plug#end()
 
 " let g:python_highlight_all = 1
