@@ -14,9 +14,9 @@ set autoindent
 set number
 set cc=80
 syntax on
-set clipboard=unnamedplus
+" set clipboard=unnamedplus
 set cursorline
-set wildignore+=node_modules/**,.git/**,intropage/**,productpage/**
+set wildignore+=node_modules/**,.git/**,intropage/**,productpage/**,*.gz,*.zip,*.png,*.csv,*.whl
 
 call plug#begin("~/.vim/plugged")
     Plug 'ryanoasis/vim-devicons'
@@ -69,6 +69,7 @@ nnoremap <leader>dc :call vimspector#Continue()<CR>
 
 nnoremap <leader>db :call vimspector#ToggleBreakpoint()<CR>
 nnoremap <leader>dB :call vimspector#ClearBreakpoints()<CR>
+nnoremap <leader>ds :call vimspector#Stop()<CR>
 
 nmap <leader>di :call vimspector#StepInto()<CR>
 nmap <leader>do :call vimspector#StepOut()<CR>
@@ -118,4 +119,8 @@ nnoremap <silent> <C-p> :FZF<CR>
 nnoremap <silent> <C-b> :Buffers<CR>
 nnoremap <silent> <C-g> :GFiles<CR>
 nnoremap <silent> <C-s> :Rg<CR>
+
+nnoremap <silent> <leader>pp :MarkdownPreviewToggle<CR>
+nnoremap <silent> <leader>= :vertical resize +5<CR>
+nnoremap <silent> <leader>- :vertical resize -5<CR>
 

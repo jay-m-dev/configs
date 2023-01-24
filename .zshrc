@@ -122,7 +122,14 @@ alias gdc="git diff --cached"
 alias gco="git checkout"
 alias gcm="git checkout master"
 alias gcb="git checkout -b"
+alias gr="git restore"
 alias t="todo.sh -d ~/todo.txt-cli/todo.cfg"
 alias n="nvim ~/notes/"
 # requires VcXsrv to display graphs from matplotlib in WSL2
 # DISPLAY=172.30.32.1:0.0
+#
+
+if [ -z "$SSH_AUTH_SOCK" ] ; then
+    eval `ssh-agent -s`
+    ssh-add
+fi
