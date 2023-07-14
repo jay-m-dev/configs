@@ -97,39 +97,27 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
+# alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# set colors for LS_COLORS
-## set colors for LS_COLORS
-eval `dircolors ~/.dircolors`
-
-function activate() { source $PWD/.venv_${PWD##*/}/bin/activate; }
-function create() { python3 -m venv $PWD/.venv_${PWD##*/}; activate}
-
-alias v="nvim"
-alias c="clear"
-alias zshcfg="nvim ~/.zshrc"
-alias vimcfg="nvim ~/.config/nvim/init.vim"
-alias ll="ls -la"
 alias gs="git status"
 alias ga="git add"
-alias gaa="git add ."
-alias gc="git commit -m"
-alias gp="git pull"
-alias gpu="git push"
-alias gd="git diff"
-alias gdc="git diff --cached"
+alias gc="git commit"
+alias gp="git push"
+alias gpl="git pull"
 alias gco="git checkout"
-alias gcm="git checkout master"
 alias gcb="git checkout -b"
+alias gd="git diff"
 alias gr="git restore"
-alias t="todo.sh -d ~/todo.txt-cli/todo.cfg"
-alias n="nvim ~/notes/"
-# requires VcXsrv to display graphs from matplotlib in WSL2
-# DISPLAY=172.30.32.1:0.0
-#
+alias gl="git log --oneline"
+alias v="vim"
+alias c="clear"
+alias h="history"
+alias p="pwd"
+alias dc="docker-compose"
+alias d="docker"
+alias dex="docker exec -it"
+# use vi mode
+bindkey -v
+# use vim keybindings when in less
+export LESS="-R"
 
-if [ -z "$SSH_AUTH_SOCK" ] ; then
-    eval `ssh-agent -s`
-    ssh-add
-fi
