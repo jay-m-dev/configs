@@ -99,25 +99,54 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias gs="git status"
-alias ga="git add"
-alias gc="git commit"
-alias gp="git push"
-alias gpl="git pull"
-alias gco="git checkout"
-alias gcb="git checkout -b"
-alias gd="git diff"
-alias gr="git restore"
-alias gl="git log --oneline"
-alias v="vim"
-alias c="clear"
-alias h="history"
-alias p="pwd"
-alias dc="docker-compose"
-alias d="docker"
-alias dex="docker exec -it"
+alias dc='docker compose'
+alias d='docker'
+alias dbb='docker buildx bake'
+alias di='docker images'
+alias de='docker exec -it'
+alias dcb='docker compose build'
+alias dcu='docker compose up'
+alias dsp='docker system prune -a -f'
+alias dvp='docker volume prune -a -f'
+alias dsvp='docker system prune -a -f && docker volume prune -a -f'
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+# alias t='cat ~/todo.txt'
+# alias v='nvim'
+# alias vt='v ~/todo.txt'
+alias g='git'
+alias gp='git push'
+alias gp='git pull'
+alias gs='git status'
+alias ga='git add'
+alias gaa='git add --all'
+alias gc='git commit'
+alias gcm='git checkout master'
+alias gco='git checkout'
+alias gcl='git clone'
+alias gl='git log --oneline'
+alias gb='git checkout -b'
+alias gd='git diff'
+alias gpu='git push'
+alias gr='git restore'
+alias ..='cd ..;pwd'
+alias ...='cd ../..;pwd'
+alias ....='cd ../../..;pwd'
+alias c='clear'
+alias h='history'
+alias mkdir='mkdir -p -v'
+alias ctl='systemctl'
+alias s='sudo'
+alias sctl='sudo systemctl'
+alias jp='jupyter notebook'
+alias create='python3 -m venv .venv'
+alias activate='source .venv/bin/activate'
+alias v='nvim'
+
 # use vi mode
 bindkey -v
 # use vim keybindings when in less
 export LESS="-R"
 
+export PATH="$HOME/software/nvim-linux64/bin:$HOME/.local/bin:$PATH"
