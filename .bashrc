@@ -9,7 +9,10 @@ export OSH='/home/jay/.oh-my-bash'
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-bash is loaded.
-OSH_THEME="agnoster"
+OSH_THEME="font"
+
+# If you set OSH_THEME to "random", you can ignore themes you don't like.
+# OMB_THEME_RANDOM_IGNORED=("powerbash10k" "wanelo")
 
 # Uncomment the following line to use case-sensitive completion.
 # OMB_CASE_SENSITIVE="true"
@@ -137,70 +140,22 @@ source "$OSH"/oh-my-bash.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias bashconfig="mate ~/.bashrc"
-# alias ohmybash="mate ~/.oh-my-bash"
+alias v="nvim"
+alias bashconfig="nvim ~/.bashrc"
+alias ohmybash="nvim ~/.oh-my-bash"
+alias create="python -m venv .venv"
+alias activate="source .venv/bin/activate"
+alias cactivate='eval "$(/home/jay/miniconda3/bin/conda shell.bash hook)"'
+alias pm="python manage.py"
+alias pmmk="python manage.py makemigrations"
+alias pmm="python manage.py migrate"
+alias pms="python manage.py runserver"
+alias d="docker"
+alias dc="docker compose"
+alias dcu="docker compose up -d"
+alias dcd="docker compose down"
+alias di="docker images"
+alias dps="docker ps"
+alias dcr="docker compose run"
 
-# some more ls aliases2
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-# alias t='cat ~/todo.txt'
-alias v='nvim'
-# alias vt='v ~/todo.txt'
-alias g='git'
-alias ga='git add'
-alias gaa='git add --all'
-alias gb='git checkout -b'
-alias gc='git commit'
-alias gco='git checkout'
-alias gcm='git checkout master'
-alias gd='git diff'
-alias gl='git log'
-alias gp='git pull'
-alias gpu='git push'
-alias gr='git restore'
-alias gs='git status'
-alias d='docker'
-alias dc='docker-compose'
-alias dcb='docker-compose build'
-alias dcu='docker-compose up'
-alias de='docker exec -it'
-alias di='docker images'
-alias dsp='docker system prune -a -f'
-alias dvp='docker volume prune -a -f'
-alias dsvp='dsp && dvp'
-alias ..='cd ..;pwd'
-alias ...='cd ../..;pwd'
-alias ....='cd ../../..;pwd'
-alias c='clear'
-alias h='history'
-alias mkdir='mkdir -p -v'
-alias ctl='systemctl'
-alias s='sudo'
-alias create='python3 -m venv .venv'
-alias activate='source .venv/bin/activate'
-
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
-
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
-fi
-
-# use vi mode
 set -o vi
-# use vim keybindings when in less
-export LESS='-R'
