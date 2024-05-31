@@ -1,7 +1,7 @@
 # Enable the subsequent settings only in interactive sessions
 case $- in
-  *i*) ;;
-    *) return;;
+*i*) ;;
+*) return ;;
 esac
 
 # Path to your oh-my-bash installation.
@@ -84,9 +84,9 @@ OMB_USE_SUDO=true
 # Example format: completions=(ssh git bundler gem pip pip3)
 # Add wisely, as too many completions slow down shell startup.
 completions=(
-  git
-  composer
-  ssh
+	git
+	composer
+	ssh
 )
 
 # Which aliases would you like to load? (aliases can be found in ~/.oh-my-bash/aliases/*)
@@ -94,7 +94,7 @@ completions=(
 # Example format: aliases=(vagrant composer git-avh)
 # Add wisely, as too many aliases slow down shell startup.
 aliases=(
-  general
+	general
 )
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-bash/plugins/*)
@@ -102,8 +102,8 @@ aliases=(
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
-  bashmarks
+	git
+	bashmarks
 )
 
 # Which plugins would you like to conditionally load? (plugins can be found in ~/.oh-my-bash/plugins/*)
@@ -140,6 +140,8 @@ source "$OSH"/oh-my-bash.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
+# alias bashconfig="mate ~/.bashrc"
+# alias ohmybash="mate ~/.oh-my-bash"
 alias v="nvim"
 alias bashconfig="nvim ~/.bashrc"
 alias ohmybash="nvim ~/.oh-my-bash"
@@ -154,8 +156,35 @@ alias d="docker"
 alias dc="docker compose"
 alias dcu="docker compose up -d"
 alias dcd="docker compose down"
+alias de="docker exec -it"
 alias di="docker images"
 alias dps="docker ps"
+alias dsp="docker system prune -a -f"
+alias dvp="docker volume prune -a -f"
 alias dcr="docker compose run"
+# alias dev="cd ~/dev/" # use function below instead
+
+function dev() {
+	cd ~/dev/"$1"
+}
 
 set -o vi
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/jay/miniconda3/bin/conda' 'shell.bash' 'hook' 2>/dev/null)"
+if [ $? -eq 0 ]; then
+	eval "$__conda_setup"
+else
+	if [ -f "/home/jay/miniconda3/etc/profile.d/conda.sh" ]; then
+		. "/home/jay/miniconda3/etc/profile.d/conda.sh"
+	else
+		export PATH="/home/jay/miniconda3/bin:$PATH"
+	fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
