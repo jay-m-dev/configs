@@ -168,6 +168,22 @@ function dev() {
 	cd ~/dev/"$1"
 }
 
+function gcj() {
+	git clone git@github.com:jay-m-dev/"$1"
+}
+
+function gcai() {
+	git clone git@github.com:CenterAIResearch/"$1"
+}
+
+function gce() {
+	git clone git@github.com:EpistasisLab/"$1"
+}
+
+function gch() {
+	git clone git@github.com:HungRoboticsLab/"$1"
+}
+
 set -o vi
 
 export NVM_DIR="$HOME/.nvm"
