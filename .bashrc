@@ -162,6 +162,7 @@ alias dps="docker ps"
 alias dsp="docker system prune -a -f"
 alias dvp="docker volume prune -a -f"
 alias dcr="docker compose run"
+alias pir="pip install -r requirements.txt"
 # alias dev="cd ~/dev/" # use function below instead
 
 function dev() {
