@@ -5,11 +5,11 @@ case $- in
 esac
 
 # Path to your oh-my-bash installation.
-export OSH='/home/jay/.oh-my-bash'
+export OSH='/home/moranj3/.oh-my-bash'
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-bash is loaded.
-OSH_THEME="zork"
+OSH_THEME="copied-duru"
 
 # If you set OSH_THEME to "random", you can ignore themes you don't like.
 # OMB_THEME_RANDOM_IGNORED=("powerbash10k" "wanelo")
@@ -138,7 +138,7 @@ source "$OSH"/oh-my-bash.sh
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else
-#   export EDITOR='mvim'
+#   export EDITOR='nvim'
 # fi
 
 # Compilation flags
@@ -153,7 +153,11 @@ source "$OSH"/oh-my-bash.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
+# alias bashconfig="mate ~/.bashrc"
+# alias ohmybash="mate ~/.oh-my-bash"
 alias v="nvim"
+alias vinit="nvim ~/.config/nvim/init.lua"
+alias vlg="nvim ~/dev/SurgicalPredictionApp/logs/*.log ~/dev/SurgicalPredictionApp/inference_engine/logs/*.log"
 alias bashconfig="nvim ~/.bashrc"
 alias ohmybash="nvim ~/.oh-my-bash"
 alias create="python -m venv .venv"
@@ -165,21 +169,28 @@ alias pmm="python manage.py migrate"
 alias pms="python manage.py runserver"
 alias d="docker"
 alias dc="docker compose"
-alias dcu="docker compose up -d"
+alias dcb="docker compose build"
 alias dcd="docker compose down"
+alias dcu="docker compose up"
 alias de="docker exec -it"
 alias di="docker images"
 alias dps="docker ps"
 alias dsp="docker system prune -a -f"
 alias dvp="docker volume prune -a -f"
 alias dcr="docker compose run"
+alias gpt="wslview https://chatgpt.com"
+alias lg="lazygit"
+alias w="wslview https://chatgpt.com"
 alias pir="pip install -r requirements.txt"
-alias pu="sudo pacman -Syu"
-alias pi="sudo pacman -S"
-alias srun="./scripts/run_all_local.sh"
-alias sstop="./scripts/stop_all_local.sh"
-alias sdb="./scripts/init_db.sh"
-# alias dev="cd ~/dev/" # use function below instead
+alias sau="sudo apt update"
+alias sag="sudo apt upgrade"
+alias sai="sudo apt install"
+alias srun="scripts/run_all_local.sh"
+alias sdb="scripts/init_db.sh"
+alias sinstall="scripts/install_all.sh"
+alias sstop="scripts/stop_all_local.sh"
+alias sclearredis="scripts/clear_redis_q.sh"
+alias t="tmux"
 
 function dev() {
 	cd ~/dev/"$1"
@@ -206,3 +217,7 @@ set -o vi
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+DISABLE_AUTO_UPDATE=true
+export WSL_NO_GUI=true
+export PATH=$HOME/.local/bin:$PATH
+export BROWSER=wslview
