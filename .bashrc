@@ -160,8 +160,9 @@ alias vinit="nvim ~/.config/nvim/init.lua"
 alias vlg="nvim ~/dev/SurgicalPredictionApp/logs/*.log ~/dev/SurgicalPredictionApp/inference_engine/logs/*.log"
 alias bashconfig="nvim ~/.bashrc"
 alias ohmybash="nvim ~/.oh-my-bash"
-alias create="python -m venv .venv"
-alias activate="source .venv/bin/activate"
+alias create="python -m venv .venv && source .venv/bin/activate"
+alias act="source .venv/bin/activate"
+alias deact="deactivate"
 alias cactivate='eval "$(/home/jay/miniconda3/bin/conda shell.bash hook)"'
 alias pm="python manage.py"
 alias pmmk="python manage.py makemigrations"
@@ -186,6 +187,8 @@ alias sau="sudo apt update"
 alias sag="sudo apt upgrade"
 alias sai="sudo apt install"
 alias srun="scripts/run_all_local.sh"
+alias srunworkers="scripts/run_workers.sh"
+alias sstopworkers="scripts/stop_workers.sh"
 alias sdb="scripts/init_db.sh"
 alias sinstall="scripts/install_all.sh"
 alias sstop="scripts/stop_all_local.sh"
@@ -221,3 +224,12 @@ DISABLE_AUTO_UPDATE=true
 export WSL_NO_GUI=true
 export PATH=$HOME/.local/bin:$PATH
 export BROWSER=wslview
+
+# Skip tmux in VSCode and JetBrains terminals
+if [ -z "$TMUX" ] &&
+   [ "$TERM_PROGRAM" != "vscode" ] &&
+   [ "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" ]; then
+  tmux attach -t dev 2>/dev/null || tmux new -s dev
+fi
+
+# export PATH="$PATH:/opt/mssql-tools18/bin"
